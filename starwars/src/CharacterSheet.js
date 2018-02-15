@@ -1,8 +1,8 @@
 import React from 'react';
-import './Container.css';
+import './CharacterSheet.css';
 import pictures from './pictures';
 
-function Container(props) {
+function CharacterSheet(props) {
   return(
     <div className="container">
       <div className="container__topRow">        {/* top row */}
@@ -30,4 +30,4 @@ function Container(props) {
   );
 }
 
-export default Container;
+export default CharacterSheet;

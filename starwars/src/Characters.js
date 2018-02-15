@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import Container from './Container';
+import './Characters.css';
+import CharacterSheet from './CharacterSheet';
 
-class App extends Component {
+class Characters extends Component {
   constructor() {
     super();
     this.state = {
@@ -26,11 +26,11 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="Characters">
         <h1 className="Header">React Wars</h1>
         <div className="mainBody">
           {this.state.starwarsChars.map((character, i) => {
-            return <Container key={i+'a'} charInfo={character} index={i} />
+            return <CharacterSheet key={i+'a'} charInfo={character} index={i} />
           })}
         </div>
       </div>
@@ -38,4 +38,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Characters;
