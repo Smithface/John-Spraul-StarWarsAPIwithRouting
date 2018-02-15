@@ -1,8 +1,30 @@
-.limitsheetsize {
+.parentBox {
+  display: flex;
+}
+
+.limitSheetSize {
     width: 40%;
     margin: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     color: black;
+}
+
+.bigButton {
+  margin: 40px;
+  height: 400px;
+  width: 40%;
+  background-image: linear-gradient(to top right,
+  rgb(120, 154, 177),
+  rgb(158, 179, 194),
+  rgb(59, 80, 94),
+  rgb(83, 112, 131));
+  border: 2px solid black;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 60px;
+  box-shadow: 4px 4px 10px 3px black;
 }
