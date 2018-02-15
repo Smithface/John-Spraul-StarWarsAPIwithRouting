@@ -4,6 +4,18 @@ import pictures from './pictures';
 
 class CharacterSheet extends React.Component {
 
+  state = {
+    character: null,
+  };
+  
+  componentDidMount() {
+    let id = null;
+    if(this.props.index === undefined) {
+      id = this.props.match.params.id
+    } else { id = this.props.index }
+    
+  }
+
   render() {
     return(
       <div className="container">
