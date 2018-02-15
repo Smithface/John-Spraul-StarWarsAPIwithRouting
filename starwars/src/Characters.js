@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Characters.css';
 import CharacterSheet from './CharacterSheet';
+import { Link } from 'react-router-dom'
 
 class Characters extends Component {
   constructor() {

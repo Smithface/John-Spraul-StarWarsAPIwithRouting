@@ -7,6 +7,7 @@ class CharacterSheet extends React.Component {
 
   state = {
     character: null,
+    myID: 0
   };
   
   componentDidMount() {
@@ -16,7 +17,7 @@ class CharacterSheet extends React.Component {
     } else { id = this.props.index + 1 }
     axios
       .get(`https://swapi.co/api/people/${id}/`)
-      .then(response => this.setState(() => ({ character: response}) ))
+      .then(response => this.setState(() => ({ character: response, myID: id-1}) ))
       .catch(error => {console.error(error)});
   }
 
@@ -33,7 +34,7 @@ class CharacterSheet extends React.Component {
           <div>Character License</div>
         </div>
         <div className="container__middleRow">        {/* middle row */}
-          <img src={pictures[this.props.index].picture} alt={name} />
+          <img src={pictures[this.state.myID].picture} alt={name} />
           <div className="container__middleRow-right">          {/* center start */}
             <div><b>Name:</b> {name}</div>
             <div><b>YOB:</b> {birth_year}</div>
