@@ -13,4 +13,13 @@
   justify-content: center;
 
 }
+.mainBody1 {
+  width: 40%;
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: black;
+
+}
 /* write your parent styles in here for your App.js */

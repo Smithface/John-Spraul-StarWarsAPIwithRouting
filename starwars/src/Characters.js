@@ -31,7 +31,11 @@ class Characters extends Component {
         <h1 className="Header">React Wars</h1>
         <div className="mainBody">
           {this.state.starwarsChars.map((character, i) => {
-            return <CharacterSheet key={i+'a'} charInfo={character} index={i} />
+            return (
+              <Link className="mainBody1" to={`/character/${i+1}`} key={i+'a'}>
+                <CharacterSheet charInfo={character} index={i} />
+              </Link>
+            );
           })}
         </div>
       </div>

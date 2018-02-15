@@ -1,7 +1,7 @@
 .container {
-  margin: 40px;
+  margin: 0;
   height: 400px;
-  width: 40%;
+  width: 100%;
   background-image: linear-gradient(to top right,
     rgb(59, 80, 94),
     rgb(83, 112, 131),
