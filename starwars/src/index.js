@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import Characters from './Characters';
-import CharacterSheet from './CharacterSheet'
+import IndividualInfo from './IndividualInfo'
 
 const App = () => (
   <Router>
     <div>
       <Route path = "/" component={Characters} exact />
-      <Route path = "/character/:id" component={CharacterSheet} />
+      <Route path = "/character/:id" component={IndividualInfo} />
     </div>
   </Router>
 )
