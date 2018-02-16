@@ -2,14 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import './BlankSlate.css';
 
-const DishOutData = (props) => {
-  for (let i in props.data) {
-    return (
-      <div><b>{i}:</b> {props.data[i]}</div>
-    );
-  }
-}
-
 class BlankSlate extends React.Component {
 
   state = {
@@ -33,16 +25,16 @@ class BlankSlate extends React.Component {
     }
 
     return(
-      <div className="container">
-        <div className="container__topRow">        {/* top row */}
+      <div className="blankSlate">
+        <div className="blankSlate__topRow">        {/* top row */}
           <div>{this.state.category}</div>
           <div>{this.state.number}</div>
         </div>
-        <div className="container__middleRow">        {/* middle row */}
+        <div className="blankSlate__middleRow">        {/* middle row */}
           {/* <img src={pictures[this.state.myID].picture} alt={name} /> */}
-          <div className="container__middleRow-right">          {/* center start */}
-            <DishOutData data={this.state.entity.data} />
-          </div>          {/* center end */}
+          {Object.keys(this.state.entity.data).map((elem, i) =>{
+            return (<div key={`${this.state.category + this.state.number + i}`}><b>{elem}:</b> {this.state.entity.data[elem]}</div>);
+          })}
         </div>
       </div>
     );
