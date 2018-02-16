@@ -1,5 +1,6 @@
 .parentBox {
   display: flex;
+  justify-content: center;
 }
 
 .limitSheetSize {
