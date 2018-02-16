@@ -12,8 +12,8 @@ const App = () => (
       <div className="Characters">
         <h1 className="Header">React Wars</h1>
         <Route path = "/" component={Characters} exact />
-        <Route path = "/character/:id" component={IndividualInfo} />
-        <Route path = "/:category/:number" component={BlankSlate} />
+        <Route path = "/character/withpics/:id" component={IndividualInfo} />
+        <Route path = "/:category/:number" component={BlankSlate} exact />
       </div>
     </div>
   </Router>
