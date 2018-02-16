@@ -8,8 +8,11 @@ import IndividualInfo from './IndividualInfo'
 const App = () => (
   <Router>
     <div>
-      <Route path = "/" component={Characters} exact />
-      <Route path = "/character/:id" component={IndividualInfo} />
+      <div className="Characters">
+        <h1 className="Header">React Wars</h1>
+        <Route path = "/" component={Characters} exact />
+        <Route path = "/character/:id" component={IndividualInfo} />
+      </div>
     </div>
   </Router>
 )

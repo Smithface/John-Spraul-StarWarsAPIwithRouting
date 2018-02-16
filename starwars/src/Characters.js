@@ -27,8 +27,6 @@ class Characters extends Component {
   }
   render() {
     return (
-      <div className="Characters">
-        <h1 className="Header">React Wars</h1>
         <div className="mainBody">
           {this.state.starwarsChars.map((character, i) => {
             return (
@@ -38,7 +36,6 @@ class Characters extends Component {
             );
           })}
         </div>
-      </div>
     );
   }
 }
